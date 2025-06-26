@@ -17,8 +17,6 @@ A responsive multi-step form built with **Next.js** and **Tailwind CSS**, design
 
 ## Screenshots
 
-<img src="./public/screenshots/mobile.png" width="300" />
-<img src="./public/screenshots/desktop.png" width="600" />
 
 ## Getting Started
 
