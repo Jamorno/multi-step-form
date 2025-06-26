@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f0f5ff;
+  --darkBlue: #02295a;
+  --purple: #473dff;
+  --blueCircle: #bfe2fd;
+}
+
+.bg-mobile {
+  background-image: url("/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-desktop {
+  background-image: url("/mages/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .bg-mobile {
+    background-image: none;
+  }
+  .bg-desktop {
+    background-image: url('/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+  }
+}
+
+body {
+  background-color: var(--background);
+}
+
+h1, h2, h3 {
+  color: var(--darkBlue);
+}
+
+label {
+  color: var(--purple);
+}
+
+/* Toggle switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #02295a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
